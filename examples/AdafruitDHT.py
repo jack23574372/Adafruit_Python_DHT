@@ -94,19 +94,3 @@ while True:
 	else:
 		print('Failed to get reading. Try again!')
 		sys.exit(1)
-
-=======
-        humidity,temperature=Adafruit_DHT.read_retry(sensor,pin)
-        SwitchStatus=GPIO.input(22)
-        if(SwitchStatus==0):
-                print('Button pressed')
-        else:
-                print('Button release')
-        if humidity is not None and temperature is not None:
-                print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, $
-                payload = {"datapoints":[{"dataChnId":"Humidity","values":{"val$
-                post_to_mcs(payload)
-                time.sleep(10)
-        else:
-                print('Failed to get reading. Try again!')
-                sys.exit(1)
